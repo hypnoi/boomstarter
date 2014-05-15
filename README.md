@@ -8,8 +8,9 @@ Hi!
 
 iptables настраивается примерно следующим образом:
 
--A INPUT -p tcp -s $ALLOWEDHOSTS --dport 9200 -j ACCEPT
+Разрешаем нужным хостам соедениться
+-A INPUT -p tcp -s $ALLOWEDHOSTS --dport $PORT -j ACCEPT
+Отсекаем все остальные
 -A INPUT -p tcp --dport $PORT -j DROP
-
 лежит тут
 cookbooks/iptables/templates/default/all_established.erb
