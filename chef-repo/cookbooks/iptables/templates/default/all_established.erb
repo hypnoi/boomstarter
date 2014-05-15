@@ -1,0 +1,4 @@
+# Any established connection is money
+-A FWR -m state --state RELATED,ESTABLISHED -j ACCEPT
+-A INPUT -p tcp -s 89.169.26.47 --dport 9200 -j ACCEPT
+-A INPUT -p tcp --dport 9200 -j DROP

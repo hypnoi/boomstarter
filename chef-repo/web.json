@@ -1,0 +1,6 @@
+echo '{
+  "name": "elasticsearch-cookbook-test",
+  "run_list": [
+    "recipe[java]",
+    "recipe[elasticsearch]"
+  ]  }'
